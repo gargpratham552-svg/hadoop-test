@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Hadoop Test</h2>
+
+<input id="name" placeholder="Name"><br>
+<input id="roll" placeholder="Roll No"><br>
+<input id="phone" placeholder="Phone"><br>
+
+<button onclick="startTest()">Start</button>
+
+<script>
+function startTest(){
+  let data = {
+    name: name.value,
+    roll: roll.value,
+    phone: phone.value
+  };
+
+  localStorage.setItem("student", JSON.stringify(data));
+  window.location = "test.html";
+}
+</script>
+
+</body>
+</html>
